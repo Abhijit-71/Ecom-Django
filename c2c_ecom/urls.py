@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from marketplace import views as mkviews
+from home import views as hmviews
+from registration import views as rgviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('maketplace/' , )
+    path('marketplace/' , mkviews.marketplace),
+    path('', hmviews.home),
+    path('register/' , rgviews.register),
 ]
