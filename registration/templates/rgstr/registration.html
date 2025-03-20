@@ -7,5 +7,20 @@
 </head>
 <body>
     <h1>Page for Registration Form</h1>
+    <div class="content">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form">
+                {{ form }}
+            </fieldset>
+            <div class="sign">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="log">
+            <small>already registered ?</small>
+            <a href="#">Login</a>
+        </div>
+    </div>
 </body>
 </html>
