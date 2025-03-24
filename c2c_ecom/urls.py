@@ -22,7 +22,7 @@ from registration import views as rgviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('marketplace/' , mkviews.marketplace),
-    path('', hmviews.home),
-    path('register/' , rgviews.register),
+    path('marketplace/' , mkviews.marketplace , name='market'),
+    path('', hmviews.home , name='home'),
+    path('register/' , rgviews.register , name='registration-page'),
 ]
