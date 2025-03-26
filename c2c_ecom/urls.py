@@ -21,6 +21,8 @@ from home import views as hmviews
 from registration import views as rgviews
 from django.contrib.auth import views as auth_views
 
+#all routes here
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('marketplace/' , mkviews.marketplace , name='market'),
