@@ -19,10 +19,13 @@ from django.urls import path
 from marketplace import views as mkviews
 from home import views as hmviews
 from registration import views as rgviews
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('marketplace/' , mkviews.marketplace , name='market'),
-    path('', hmviews.home , name='home'),
+    path('' , hmviews.home , name='home'),
+    path('login/', auth_views.LoginView.as_view(template_name='login/log_in.html') , name='login'),
+    path('logout', auth_views.LogoutView.as_view() , name='logout'),
     path('register/' , rgviews.register , name='registration-page'),
 ]

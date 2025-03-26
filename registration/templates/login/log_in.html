@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Page for Registration Form</h1>
+    <h1>Page for Login</h1>
     <div class="content">
         <form method="POST">
             {% csrf_token %}
@@ -14,12 +14,12 @@
                 {{ form }}
             </fieldset>
             <div class="sign">
-                <button type="submit">Sign Up</button>
+                <button type="submit">Login</button>
             </div>
         </form>
         <div class="log">
-            <small>already registered ?</small>
-            <a href="{% url 'login' %}">Login</a>
+            <small>Not a member ?</small>
+            <a href="{% url 'registration-page' %}">Register</a>
         </div>
     </div>
 </body>
